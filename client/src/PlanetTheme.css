@@ -1,0 +1,121 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    font-family: "Arial, sans-serif";
+    background: radial-gradient(circle at bottom, #0b3d91, #1b263b, #000814);
+    color: #ffffff;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Starry Background */
+  .starry-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2; /* Ensures stars are in the background */
+  }
+  
+  /* Star Styling */
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 50%;
+    animation: twinkle 2s infinite ease-in-out;
+    opacity: 0.5;
+  }
+  
+  /* Small Planet Styling */
+  .planet {
+    position: absolute;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover Effect for Planets */
+  .planet:hover {
+    transform: scale(1.5); /* Grows the planet */
+    box-shadow: 0 0 20px #ffffff, 0 0 40px #4fc3f7; /* Glow effect */
+  }
+  
+  /* Animation for Twinkling Stars */
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  /* Upload Container */
+  .planet-theme-container {
+    position: relative;
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(0, 8, 20, 0.9);
+    border: 2px solid #1b9aaa;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #1b9aaa, 0 0 60px #415a77;
+    width: 350px;
+    z-index: 1;
+  }
+  
+  /* Title Styling */
+  .planet-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #4fc3f7;
+    text-shadow: 0 0 10px #4fc3f7, 0 0 20px #1b9aaa;
+    font-weight: bold;
+  }
+  
+  /* File Input Styling */
+  .planet-input {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    background: #1b263b;
+    color: #fff;
+    font-size: 1rem;
+    border: 2px solid #415a77;
+    border-radius: 15px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .planet-input:hover,
+  .planet-input:focus {
+    border-color: #4fc3f7;
+    box-shadow: 0 0 10px #4fc3f7, 0 0 20px #1b9aaa;
+  }
+  
+  /* Upload Button Styling */
+  .planet-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(90deg, #1b9aaa, #4fc3f7);
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #1b9aaa, 0 0 40px #4fc3f7;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .planet-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 0 40px #1b9aaa, 0 0 80px #4fc3f7;
+  }
+  
